@@ -10,7 +10,29 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
+    <nav id="nav1">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Language Selector -->
+            <li>
+                <select onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ar">Arabic</option>
+                    <option value="ur">Urdu</option>
+                    <option value="fr">French</option>
+                </select>
+            </li>
+            <li><span class="hamburger" onclick="opensidebar()">&#9776;</span></li>
+        </ul>
+    </nav>
+
+    <nav id="nav2">
+        <img onclick="closesidebar()" src="/home/alihatariq/Documents/assi1/cross-white.png"/>
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -30,22 +52,21 @@
         </ul>
     </nav>
 
+
     <!-- Content Sections -->
     
     <section id="about">
-        <h1>About Me</h1>
+        <h2>About Me</h2>
+        <h1 id="h1">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
         <div id="about-container">
             <div id="profile-picture-container">
-                <img src="/home/alihatariq/Documents/assi1/profile-picture.png" alt="Profile Picture" id="profile-picture">
+                <img src="/home/alihatariq/Documents/Semester_5/Web-development/assi1/profile-picture.png" alt="Profile Picture" id="profile-picture">
             </div>
             <div id="about-text">
                 <p id="about-content"></p>
             </div>
         </div>
-        <video id="profile-video" controls>
-            <source src="" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      
     </section>
     
 
@@ -70,16 +91,31 @@
     </section>
 
      <section id="social-media">
-        <h2>Social Media Feed</h2>
-        <!--  Embed facebook Feed Example-->
-        <a class="facebook-timeline" data-width="300" data-height="400" href="https://facebook.com/[YourfacebookHandle]?ref_src=twsrc%5Etfw">Post by [YourfacebookHandle]</a>
-        <script async src="https://platform.facebook.com/widgets.js" charset="utf-8"></script>
+        <h2>How to become programmer</h2>
+            <div class="video-container">
+                <iframe 
+                src="https://www.youtube.com/embed/W9hXsU_vh5k"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+            </iframe>
     </section> 
 
     <section id="contact">
         <h2>Contact Me</h2>
         <div id="contact-info"></div>
     </section>
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>
+            <a href="#" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+            <a href="#" class="social-icon"> <i class="fab fa-instagram"></i> </a>
+        </div>
+        <h5>© My portfolio</h5>
+    </footer>
+    <script src="https://kit.fontawesome.com/0ff678c22c.js" crossorigin="anonymous"></script>
+
 
     <!-- JavaScript to Populate Content -->
     <script src="script.js"></script>
