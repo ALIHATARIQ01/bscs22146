@@ -1,7 +1,7 @@
+
 // JavaScript Object for Data
 const profileData = {
-    about: "Hello, I'm ALliha Tariq, a Computer scientist. Immersed in computer science, I've crafted many projects. These experiences ignited my passion for coding, problem-solving, and algorithmic design. Eager to expand my horizons, I'm ready to embrace challenges, innovate solutions, and contribute to the ever-evolving tech sector. This profile showcases my skills, projects, and professional experiences.",
-    videoUrl: "your-video.mp4",
+    about: "Hello, I’m Aliha Tariq, a passionate computer scientist with a deep interest in coding, problem-solving, and algorithmic design. Throughout my academic journey, I’ve developed various innovative projects, including game development (Shogi, Snake Game, Chess, Ludo) and applications like a console-based Microsoft Paint using object-oriented programming in Python, as well as a Recipe Management System with Node.js and JavaScript. Each project has pushed me to sharpen my technical skills while exploring new technologies. In addition to these projects, I’ve earned recognition for my dedication to learning and excellence. I’ve completed certifications such as C++ Programming from Codsoft and a Data Science short course, further strengthening my technical foundation. Beyond my hard skills, I thrive in collaborative environments, leveraging leadership and communication to tackle challenges head-on. My eagerness to stay ahead of the curve drives me to continuously innovate and contribute meaningful solutions in the tech sector. As I look forward to embracing more opportunities, this profile reflects not only my technical expertise but also my determination to make a lasting impact in the world of computer science.",
     skills: {
         soft: ["Leadership", "Communication", "Time Management,'Problem Solving'"],
         hard: ["Programming: Python,HTML/CSS, JavaScript, C++ (PF, OOP, DSA)", "Data Analysis"]
@@ -31,7 +31,6 @@ const profileData = {
 function populateAbout() {
     document.getElementById("about-content").textContent = profileData.about;
     
-    document.getElementById("profile-video").src = profileData.videoUrl;
 }
 
 // Function to Populate Skills Section
@@ -71,7 +70,12 @@ function populateProjects() {
         projectsList.appendChild(li);
     });
 }
-
+function opensidebar() {
+    document.getElementById("nav2").style.display = "flex";
+}
+function closesidebar() {
+    document.getElementById("nav2").style.display = "none";
+}
 // Function to Populate Certifications Section
 function populateCertifications() {
     const certificationsList = document.getElementById("certifications-list");
@@ -97,7 +101,7 @@ function populateContact() {
     const contactInfo = document.getElementById("contact-info");
     contactInfo.innerHTML = `Email: ${profileData.contact.email}<br>
     phone: ${profileData.contact.phone}<br>
-    LinkedIn: <a href="${profileData.contact.linkedin}">MY Profile</a>`;
+    LinkedIn: <a href="${profileData.contact.linkedin}">https://www.linkedin.com/in/aliha-tariq/</a>`;
 }
 
 // Initialize All Sections
@@ -116,3 +120,7 @@ document.addEventListener("DOMContentLoaded", initializeProfile);
 function changeLanguage(lang) {
     alert("Language changed to: " + lang);
 }
+//to amke responsive
+document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector("nav").classList.toggle("active");
+});
